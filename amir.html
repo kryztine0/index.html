@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Happy Birthday Amir!</title>
+<style>
+  body {
+    background-color: #cce7ff; /* pastel blue */
+    font-family: 'Arial', sans-serif; /* minimalist cute font */
+    padding: 40px;
+    line-height: 1.6;
+    color: #333;
+    overflow-y: scroll;
+    position: relative;
+    min-height: 100vh;
+  }
+
+  /* Sparkles */
+  .sparkle {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0.8;
+    animation: twinkle 2s infinite;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.2; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); }
+  }
+
+  .message {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeIn 1s forwards;
+    animation-delay: var(--delay);
+    margin-bottom: 20px;
+  }
+
+  @keyframes fadeIn {
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+</style>
+</head>
+<body>
+<script>
+// Create sparkles
+for (let i = 0; i < 30; i++) {
+  const sparkle = document.createElement('div');
+  sparkle.className = 'sparkle';
+  sparkle.style.left = Math.random() * 100 + 'vw';
+  sparkle.style.top = Math.random() * 100 + 'vh';
+  sparkle.style.animationDelay = (Math.random() * 2) + 's';
+  document.body.appendChild(sparkle);
+}
+
+// Birthday message
+const messageText = `hi baby! mustaaaa? how's my birthday boy so far? ay di na pala boy noh, 18 ka na eee! yieeeeee HAPPY BIRTHDAY BABYYY! welcome to legalityyy!!! pedeng pede na kita ipakulong hahahahaha joke lang pre! ano handa naten garr? nako! hinay hinay lang sa chibugan aa! alam ko namang in game ka sa ganyan pero kalmahan mo lang pare hshahahaha chares! saktong sakto pala noh, linggo ngayon bim! nako, wag na wag na WAG mo talagang makakalimutang magpasalamat sa Kanya today ha! naging roller coaster man 'tong 18 years ng buhay mo, 'di mo pa rin naman maitatanggi na marami kang natutunan, nakilalang mga tao, at naipong mga masasayang alaala, diba?... life hadn't been easy; pero, see, you made it this far! and it's the greatest thing to be thankful for :)) ngayong young adult ka na din, (gurang ka naaaa! chawotttt.) hindi na biro tong mga tatahakin mo. darating na tayo sa punto na magkakasubukan na. dito na masusukat kung ano ba yung mga prinsipyong papanindigan mo, ano yung mga desisyon na gagawin mo at mga isasantabi mo. you will meet a lot of people sooner and ang ilan sa kanila, titimbangin ka sa kung anu-ano at sinu-sino ba yung mahalaga, ganon. in short, bakbakan na talaga 'to beh!!! alam kong ngayon pa lang e di na nagiging madali ang buhay para sayo, pero ito ang tandaan mo bim, kasama mo kong haharapin lahat ng yan ha. marami mang mag-a-upgrade or mas lalong lalala, i promise that i'll always be constant, i'll always stay.... yes, sooner mas magiging busy na tayo pareho kase nasa peek na tayo ng studies naten. darating sa punto na baka di tayo makapag-usap ng isang araw or maybe dalawang araw sa dami ng stress at gagawin sa acads, magkakabangayan tayo sa mga bagay na magkaiba tayo ng pov, may mga selosan pamg magaganap, magkakaroon ng mga misunderstandings, plus pa yung problema sa money at pamilya... pero i know someday, we'll gonna sit down together, magkakape habang nagrerecall ng lahat ng mga nangyare saten, and say "It was hard, but we made it."  
+sorry din pala sa lahat bim, sa mga naging lapses ko at sa mga magagawa ko mang atraso sayo in the future. madalas, i feel guilty kasi shempre, i wanna be an understanding girlfriend, pero sometimes i really can't control my mood, emotions, silence, and anger, lalo na when you do something that triggers me. but still, please know that i'm trying my best. i never meant to hurt you or push you away, even when i shut down or react harshly. its just sometimes, my emotions get too heavy and i struggle to express what i truly feel. i see your efforts and i deeply appreciate your patience, even when i'm not my best. i love you and that love keeps me trying everyday to be better. thank you for reviving this little child inside me. ininspire mo kong magpakatotoo and mahalin yung sarili ko. never mo kong hinusgahan sa lahat ng meron ako, and you even helped me embrace your flaws. thank you for being my best friend — kahuntahan ko sa lahat ng chismis na masasagap ko, shock absorber and rant listener ko, labasan ko ng sama ng loob, support system ko, human daily diary ko, and shempre, notepad ko ng mga password at lahat ng pedeng makalimutan xD thank you for all your efforts and sacrifices sa'kin. hindi birong mag-alaga ng shelee pero i'm so glad, you managed it haha!  
+sana naging maganda ang bungad ng umaga mo ngayon, and kung hindi man, sana mag end ang araw mong may ngiti ka sa labi. sana maalala ka ng mga taong pinahalagahan mo sa 18 years na nabuhay ka. sana mabusog ka, sana mag-enjoy ka, and sana good vibes, gratitude, and fulfillment ang bumuo sa araw mo. never forget that you are important!!! you are special, you are unique, and you matter a lot even if sometimes, your head makes you think the opposite. i hope that one day, when your time finally comes, everything you have prayed for will find its way to you. i also hope you find peace in the battles you kept in silence. i'll forever be celebrating all your achievements and even the little things you surpassed in life. remember that i'm so proud of you and i love you always! take care tabimbim, and enjoy the rest of your day! mwaaaaaaaaaaaaaaaaaaa!  
+xoxo, shelee♡`;
+
+const container = document.body;
+
+messageText.split(/\n+/).forEach((para, i) => {
+  const p = document.createElement('p');
+  p.textContent = para;
+  p.className = 'message';
+  p.style.setProperty('--delay', `${i * 0.3}s`);
+  container.appendChild(p);
+});
+</script>
+</body>
+</html>
